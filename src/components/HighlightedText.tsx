@@ -58,7 +58,7 @@ const HighlightedText: React.FC<HighlightedTextProps> = ({ text, indices = [] })
         <motion.span
           key={`highlight-${i}`}
           className={`highlight ${getHighlightClass(highlight.type)}`}
-          onMouseEnter={(e) => handleMouseEnter(i, e)}
+          onMouseEnter={(e:React.MouseEvent) => handleMouseEnter(i, e)}
           onMouseLeave={handleMouseLeave}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
